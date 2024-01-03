@@ -16,7 +16,8 @@
   ],
   "exports": {
     ".": "./index.ts",
-    "./button": "./button/index.ts"
+    "./button": "./button/index.ts",
+    "./utils": "./utils/index.ts"
   },
   "scripts": {
     "dev": "vite",
