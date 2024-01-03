@@ -1,6 +1,19 @@
 {
   "name": "turbo",
   "private": true,
+  "keywords": [
+    "turbo",
+    "react",
+    "nextjs",
+    "vite",
+    "monorepo",
+    "typescript",
+    "tailwindcss",
+    "eslint",
+    "prettier",
+    "pnpm",
+    "husky"
+  ],
   "author": {
     "email": "serifcolakel0@gmail.com",
     "name": "Serif Colakel",
