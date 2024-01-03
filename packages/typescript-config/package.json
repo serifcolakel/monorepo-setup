@@ -1,0 +1,14 @@
+{
+  "name": "@serif/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "email": "serifcolakel0@gmail.com",
+    "name": "Serif Colakel",
+    "url": "https://github.com/serifcolakel"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "turbo",
+  "private": true,
+  "author": {
+    "email": "serifcolakel0@gmail.com",
+    "name": "Serif Colakel",
+    "url": "https://github.com/serifcolakel"
+  },
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@serif/eslint-config": "workspace:*",
+    "@serif/tailwind-config": "workspace:*",
+    "@serif/typescript-config": "workspace:*",
+    "husky": "^8.0.3",
+    "prettier": "^3.1.1",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "turbo": {
+    "eslint": {
+      "extends": "@serif/eslint-config"
+    },
+    "typescript": {
+      "extends": "@serif/typescript-config"
+    },
+    "tailwind": {
+      "extends": "@serif/tailwind-config"
+    }
+  }
+}

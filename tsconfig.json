@@ -1,0 +1,3 @@
+{
+  "extends": "@serif/typescript-config/base.json"
+}

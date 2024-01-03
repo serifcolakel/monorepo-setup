@@ -1,0 +1,33 @@
+{
+  "name": "@serif/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "author": {
+    "email": "serifcolakel0@gmail.com",
+    "name": "Serif Colakel",
+    "url": "https://github.com/serifcolakel"
+  },
+  "files": [
+    "library.js",
+    "next.js",
+    "react-vite.js"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "@vercel/style-guide": "^5.1.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-turbo": "^1.10.12",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "typescript": "^5.2.2"
+  }
+}

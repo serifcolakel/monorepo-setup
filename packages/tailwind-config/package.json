@@ -1,0 +1,12 @@
+{
+  "name": "@serif/tailwind-config",
+  "version": "0.0.0",
+  "author": {
+    "email": "serifcolakel0@gmail.com",
+    "name": "Serif Colakel",
+    "url": "https://github.com/serifcolakel"
+  },
+  "files": [
+    "tailwind.config.js"
+  ]
+}
