@@ -1,10 +1,10 @@
 import { MutableRefObject, useEffect, useRef } from 'react';
 
-import { cn } from '@serif/ui/utils';
+import { cn } from '../libs/classNames.utils';
 
 type PortalAttributes = Record<string, string>;
 
-interface UsePortalOptions {
+export interface UsePortalOptions {
   id: string;
   className?: string;
   attributes?: PortalAttributes;
@@ -17,6 +17,11 @@ interface UsePortalResult {
   id: string;
 }
 
+/**
+ * @description A hook to create a portal
+ * @param {UsePortalOptions} props
+ * @returns {UsePortalResult}
+ */
 const usePortal = ({
   id,
   attributes = {},
@@ -39,7 +44,7 @@ const usePortal = ({
         'class',
         cn(
           'fixed inset-0 z-50 flex bg-black bg-opacity-50 w-full h-full',
-          className
+          className ?? ''
         )
       );
 
@@ -54,7 +59,10 @@ const usePortal = ({
 
     portalRoot!.appendChild(currentElRef!);
 
-    currentElRef!.setAttribute('class', cn('w-full h-full', elementClass));
+    currentElRef!.setAttribute(
+      'class',
+      cn('w-full h-full', elementClass ?? '')
+    );
 
     if (childId) currentElRef!.setAttribute('id', childId);
 

@@ -1,3 +1,1 @@
-import { useTest } from './hooks';
-
-export { useTest };
+export const TEST = 'TEST';
