@@ -12,7 +12,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@serif/library": "workspace:*",
+    "@serif/libs": "workspace:*",
+    "@serif/ui": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

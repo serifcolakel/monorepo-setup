@@ -94,7 +94,7 @@ module.exports = {
           'error',
           {
             groups: [
-              ['^react', '^@storybook', '^\\w'],
+              ['^react', '^@storybook', '^@serif', '^\\w'],
               ['^@store(/.*|$)'],
               ['^@components(/.*|$)'],
               ['^@serif(/.*|$)'],

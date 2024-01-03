@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-import { Button, useTest } from '@serif/library';
+import { useTest } from '@serif/libs';
+import { Button } from '@serif/ui';
 
 import reactLogo from '@assets/react.svg';
 
