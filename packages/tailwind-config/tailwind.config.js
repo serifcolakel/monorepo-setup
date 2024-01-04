@@ -9,6 +9,30 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        slideInRight: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        slideInLeft: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        slideOutRight: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        slideOutLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        slideInRight: 'slideInRight 0.3s ease-out',
+        slideInLeft: 'slideInLeft 0.3s ease-out',
+        slideOutRight: 'slideOutRight 0.3s ease-out',
+        slideOutLeft: 'slideOutLeft 0.3s ease-out',
+      },
       colors: {
         primary: {
           50: '#FEF0E6',
