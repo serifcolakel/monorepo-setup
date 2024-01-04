@@ -1,8 +1,8 @@
-import { MutableRefObject, useEffect, useRef } from 'react';
+import { CSSProperties, MutableRefObject, useEffect, useRef } from 'react';
 
 import { cn } from '../libs/classNames.utils';
 
-type PortalAttributes = Record<string, string>;
+type PortalAttributes = CSSProperties;
 
 export interface UsePortalOptions {
   id: string;
@@ -29,7 +29,11 @@ const usePortal = ({
   elementClass,
   childId,
 }: UsePortalOptions): UsePortalResult => {
-  const elRef = useRef<HTMLDivElement | null>(null);
+  const elRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
+  if (!elRef.current) {
+    elRef.current = document.createElement('div');
+  }
 
   useEffect(() => {
     let portalRoot = document.getElementById(id);
@@ -50,6 +54,7 @@ const usePortal = ({
 
       document.body.appendChild(portalRoot);
     } else {
+      portalRoot.setAttribute('id', id);
       Object.entries(attributes).forEach(([key, value]) => {
         portalRoot!.setAttribute(key, value);
       });
@@ -67,8 +72,11 @@ const usePortal = ({
     if (childId) currentElRef!.setAttribute('id', childId);
 
     return () => {
-      if (currentElRef && portalRoot) {
+      if (currentElRef && portalRoot && portalRoot.contains(currentElRef)) {
         portalRoot.removeChild(currentElRef);
+      }
+
+      if (portalRoot) {
         portalRoot.remove();
       }
     };
