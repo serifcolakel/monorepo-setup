@@ -38,7 +38,7 @@ function App() {
     <main className="flex flex-col items-center justify-center w-full h-screen text-white bg-black gap-y-8">
       <Drawer>
         <DrawerCustomTrigger />
-        <Drawer.Panel canCloseWithBackDrop={false} justify="justify-end">
+        <Drawer.Panel canCloseWithBackDrop={false} justify="justify-center">
           <Drawer.Header className="border-b border-b-gray-50">
             <Drawer.Title>Test Title</Drawer.Title>
           </Drawer.Header>
@@ -81,11 +81,10 @@ function App() {
             <div className="p-20 text-center text-orange-600 rounded-lg bg-orange-50">
               Other Components - Warning
             </div>
-            <DrawerCustomChild />
           </Drawer.Content>
-          <Drawer.Footer className="bg-gray-100 border-t border-t-gray-50">
-            <Drawer.Trigger className="w-full">Cancel</Drawer.Trigger>
-            <Drawer.Trigger className="w-full">Save</Drawer.Trigger>
+          <Drawer.Footer className="justify-center bg-gray-100 border-t border-t-gray-50">
+            <DrawerCustomChild />
+            <Button intent="primary">Save</Button>
           </Drawer.Footer>
         </Drawer.Panel>
       </Drawer>

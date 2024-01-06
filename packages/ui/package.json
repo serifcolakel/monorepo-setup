@@ -17,6 +17,7 @@
   "exports": {
     ".": "./index.ts",
     "./button": "./button/index.ts",
+    "./drawer": "./drawer/index.ts",
     "./hooks": "./hooks/index.ts",
     "./utils": "./utils/index.ts"
   },
