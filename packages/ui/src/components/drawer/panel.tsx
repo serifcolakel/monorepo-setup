@@ -66,7 +66,7 @@ function DrawerPanel({
     >
       <div
         className={cn(
-          'flex flex-col md:max-w-[420px] w-11/12',
+          'flex flex-col md:w-[420px] w-11/12',
           'h-full bg-white justify-between overflow-hidden relative',
           className
         )}
