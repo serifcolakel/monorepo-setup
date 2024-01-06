@@ -1,4 +1,4 @@
-import { CSSProperties, useId } from 'react';
+import { useId } from 'react';
 
 import useEventListener from '../../hooks/useEventListener';
 import { cn } from '../../libs/classNames.utils';
@@ -9,7 +9,7 @@ import { useDrawerContext } from '.';
 export type DrawerPanelProps = {
   className?: string;
   children: React.ReactNode;
-  justify?: CSSProperties['justifyContent'];
+  justify?: 'justify-start' | 'justify-end' | 'justify-center';
   canCloseWithBackDrop?: boolean;
   drawerWrapperClassName?: string;
 };
@@ -41,6 +41,14 @@ function DrawerPanel({
     }
   });
 
+  const getAnimation = () => {
+    if (justify === 'justify-start') {
+      return 'animate-slideInLeft';
+    }
+
+    return 'animate-slideInRight';
+  };
+
   if (!isOpen) {
     return null;
   }
@@ -50,9 +58,7 @@ function DrawerPanel({
       childId={childId}
       elementClass={cn(
         'flex items-center',
-        justify === 'justify-start'
-          ? 'animate-slideInLeft'
-          : 'animate-slideInRight',
+        getAnimation(),
         justify,
         drawerWrapperClassName
       )}
