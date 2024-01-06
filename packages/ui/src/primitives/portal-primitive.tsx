@@ -1,11 +1,9 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 
 import usePortal from '../hooks/usePortal';
 
-export type PortalAttributes = {
-  [key: string]: string;
-};
+export type PortalAttributes = CSSProperties;
 
 export type PortalPrimitiveProps = {
   children: ReactNode;

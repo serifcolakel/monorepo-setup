@@ -10,6 +10,7 @@ const buttonStyles = cva(
       intent: {
         default: 'bg-gray-100 text-gray-900',
         primary: 'bg-primary-500 text-white',
+        danger: 'bg-red-500 text-white',
       },
       rounded: {
         default: 'rounded-md',
