@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import type { ButtonProps } from '@serif//library';
-import { Button } from '@serif//library';
+import type { ButtonProps } from '@serif/ui';
+import { Button } from '@serif/ui';
 
 const meta: Meta<ButtonProps> = {
   title: 'Example/Button',
@@ -17,12 +17,7 @@ const meta: Meta<ButtonProps> = {
     },
   },
   tags: ['autodocs'],
-  argTypes: {
-    loading: {
-      control: 'boolean',
-      defaultValue: false,
-    },
-  },
+  argTypes: {},
 };
 
 export default meta;
